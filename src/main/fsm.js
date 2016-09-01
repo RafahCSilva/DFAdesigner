@@ -1,6 +1,8 @@
 var greekLetterNames = [ 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega' ];
 
 function convertLatexShortcuts(text) {
+	return text; // disabled function
+
 	// html greek characters
 	for(var i = 0; i < greekLetterNames.length; i++) {
 		var name = greekLetterNames[i];
@@ -128,7 +130,7 @@ function drawUsing(c) {
 
 function draw() {
 	drawUsing(canvas.getContext('2d'));
-	saveBackup();
+	// saveBackup(); // disabled function
 }
 
 function selectObject(x, y) {
@@ -159,9 +161,9 @@ function snapNode(node) {
 	}
 }
 
-window.onload = function() {
+function DFA_init () {  //window.onload = function() {
 	canvas = document.getElementById('canvas');
-	restoreBackup();
+  DFA_LOAD();//restoreBackup(); // rewrite function
 	draw();
 
 	canvas.onmousedown = function(e) {
@@ -261,6 +263,12 @@ window.onload = function() {
 			draw();
 		}
 	};
+}
+
+function DFA_init_readonly () {
+  canvas = document.getElementById( 'canvas' );
+  DFA_LOAD();
+  draw();
 }
 
 var shift = false;

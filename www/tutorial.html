@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>DFAdesigner</title>
+  <meta name="description" content="DFA designer"/>
+  <style>
+    body {
+      margin : 0;
+      font   : normal 1em Verdana, sans-serif;
+      height : 100%;
+    }
+
+    .HdV_page {
+      min-height : 100%;
+      position   : relative;
+    }
+
+    .HdV_header {
+      padding            : 15px 0;
+      text-align         : center;
+      color              : white;
+      background-color   : #063;
+      border-bottom      : 20px solid #FC0;
+      margin-bottom      : 15px;
+
+      width              : 100%;
+      -webkit-box-shadow : 0 5px 6px #808080;
+      -moz-box-shadow    : 0 5px 6px #808080;
+      box-shadow         : 0 5px 6px #808080;
+      font-size          : 1.15em;
+    }
+
+    .HdV_header h1 {
+      padding   : 0;
+      margin    : 0;
+      font-size : 2.5em;
+    }
+
+    .HdV_body {
+      margin     : auto;
+      width      : 960px;
+      min-height : 100%;
+      position   : relative;
+      padding    : 0;
+    }
+
+    a {
+      color : inherit
+    }
+
+    .HdV_footer {
+      display          : block;
+      background-color : #063;
+      color            : #FFF;
+      text-align       : center;
+      padding          : 10px 0;
+      /*position         : absolute;*/
+      bottom           : 0;
+      width            : 100%;
+      /*clear            : both;*/
+      margin-top       : 50px;
+    }
+  </style>
+  <script src="../DFAdesigner.js"></script>
+</head>
+<body>
+<div class="HdV_page">
+
+  <div class="HdV_header">
+    <h1>DFAdesigner</h1>
+  </div>
+
+  <div class="HdV_body">
+
+    <a href="./" style="float: left" title="Voltar">
+      <img src="img/voltar.png"></a>
+
+    <h2 style="margin: 30px 40px; padding: 10px 20px">
+      Tutorial de uso do DFAdesigner </h2>
+
+    <p>
+      Para utilizar o <b>Construtor de Autômatos Finitos Determinísticos</b>, basta
+      realizar as seguintes ações descritas a seguir: </p>
+
+    <table class="HdV_tutorial">
+      <col width="30%" />
+      <col width="70%" />
+      <tr>
+        <td class="gif">
+          <img src="img/tuto1.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Adicionar Estados</h4>
+          <p>
+            Para adicionar um estado no seu autômato, basta clicar duas vezes <img
+            src="img/mouse.png" title="Clique esquerdo do mouse" /><img
+            src="img/mouse.png" title="Clique esquerdo do mouse" /> na área
+            livre do construtor.</p>
+          <p>
+            A seguir você poderá nomear este estado. Ou a qualquer outro momento,
+            basta somente selecioná-lo com um clique único <img
+            src="img/mouse.png" title="Clique esquerdo do mouse" /> assim
+            ele ficará azul indicando que está selecionado. </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto2.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Mover um Estado</h4>
+          <p>Para mover de posição um estado, basta segurar o clique do mouse <img
+            src="img/mouse.png" title="Clique esquerdo do mouse" /> sobre
+            ele e arrasta <img src="img/arrastar.png"
+                               title="Segure e Arraste" /> para o local desejado. </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto3.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Tornar um Estado em Aceitação</h4>
+          <p>Para tornar qualquer estado em estado de aceitação, basta dois cliques
+            sobre ele <img src="img/mouse.png"
+                           title="Clique esquerdo do mouse" /><img src="img/mouse.png"
+                                                                   title="Clique esquerdo do mouse" />. Dois cliques novamente o
+            retornará ao estado de não aceitação. </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto4.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Adicionar uma Transição entre dois Estados</h4>
+          <p>
+            Para adiciona uma transição entre dois estados, basta manter pressionada
+            a tecla Shift <img src="img/shift.png" title="Tecla SHIFT" /> e
+            com o mouse clicar <img src="img/mouse.png"
+                                    title="Clique esquerdo do mouse" /> sobre o primeiro estado, e mantendo
+            pressionado, arraste <img src="img/arrastar.png"
+                                      title="Segure e Arraste" /> para o segundo estado para obtendo uma
+            transição. </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto5.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Adicionar uma Transição para o mesmo Estado</h4>
+          <p>
+            Para adicionar uma transição para o mesmo estado, basta manter
+            pressionado a tecla Shift <img src="img/shift.png"
+                                           title="Tecla SHIFT" /> e clicar <img src="img/mouse.png"
+                                                                                title="Clique esquerdo do mouse" /> no estado e arrastar <img
+            src="img/arrastar.png" title="Segure e Arraste" /> para ele
+            mesmo e soltar. </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto6.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Definir o Estado Inicial</h4>
+          <p>
+            Para definir um estado inicial, basta com a tecla Shift <img
+            src="img/shift.png" title="Tecla SHIFT" /> pressionada, clicar
+            <img src="img/mouse.png" title="Clique esquerdo do mouse" /> em
+            uma área em branco e arrastar <img src="img/arrastar.png"
+                                               title="Segure e Arraste" /> para o estado escolhido. Não se faz
+            necessário nomear esta transição.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto7.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Mover e atribuir símbolo a Transição</h4>
+          <p>
+            Basta selecionar uma transição qualquer <img src="img/mouse.png"
+                                                         title="Clique esquerdo do mouse" />, e com o mouse segurar e arrastar
+            <img src="img/arrastar.png" title="Segure e Arraste" />,
+            largando após escolher a posição desejada.</p>
+          <p>Ao selecionar uma transição é possível atribuir um símbolo (ou mais,
+            separando-os por uma vírgula ",") do alfabeto \( \Sigma \) pertinente a
+            Questão, simplesmente a teclando.</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto8.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Deletar um Estado ou Transição</h4>
+          <p>Para deletar um estado, basta selecioná-lo com um clique <img
+            src="img/mouse.png" title="Clique esquerdo do mouse" /> e
+            pressionar a tecla Delete <img src="img/del.png"
+                                           title="Tecla DELETE" /> para apaga-lo. </p>
+          <p>Para deletar uma transição, basta selecioná-la com um clique <img
+            src="img/mouse.png" title="Clique esquerdo do mouse" /> e
+            pressionar a tecla Delete <img src="img/del.png"
+                                           title="Tecla DELETE" /> para apaga-la. </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto9.gif" />
+        </td>
+        <td class="descricao">
+          <h4>Salvar e Submeter</h4>
+          <p>
+            Você pode salvar sua resposta como rascunho <img
+            src="img/save.png" title="Salvar" /> , se não quiser entregar
+            naquele momento. Ou submeter <img src="img/send.png"
+                                              title="Enviar Resposta" /> sua resposta ao corretor, para que seja
+            avaliada. Mas fique atento a data limite de entrega! </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto10.png" />
+        </td>
+        <td class="descricao">
+          <h4>Palavra Dica</h4>
+          <p>
+            Se você errar sua resposta, o corretor lhe fornecerá uma palavra dica,
+            em que ela demonstrará o erro por você cometido. Haverá sempre a
+            possibilidade de submeter novamente uma nova resposta, se ainda dentro
+            da data de limite de entrega.</p>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="gif">
+          <img src="img/tuto11.png" />
+        </td>
+        <td class="descricao">
+          <h4>Erro na construção do autômato</h4>
+          <p>
+            Se houver algum erro na construção do seu autômato resposta, o sistema
+            lhe avisará, listando os erros cometidos a respeito da construção e
+            impossibilitando a submissão para julgamento até a correta
+            construção.</p>
+          <p> Mas o salvamento como rascunho poderá ser ainda utilizado.</p>
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div class="HdV_footer">
+    Desenvolvido por <a href="https://github.com/RafahCSilva"> Rafael Cardoso da
+    Silva </a>
+  </div>
+
+</div>
+</body>
+</html>
